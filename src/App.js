@@ -88,6 +88,7 @@ const getSentimentScore =(text) => {
   console.log(sequence)
   // Perform truncation and padding.
   const paddedSequence = padSequences([sequence], metadata.max_len);
+  console.log(metadata.max_len)
   setPad(paddedSequence)
 
   const input = tf.tensor2d(paddedSequence, [1, metadata.max_len]);
