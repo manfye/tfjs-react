@@ -92,6 +92,7 @@ const getSentimentScore =(text) => {
   setPad(paddedSequence)
 
   const input = tf.tensor2d(paddedSequence, [1, metadata.max_len]);
+  console.log(input)
   setInput(input)
   const predictOut = model.predict(input);
   const score = predictOut.dataSync()[0];
